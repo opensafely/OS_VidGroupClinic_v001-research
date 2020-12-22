@@ -14,7 +14,7 @@
 ## ==============================================================================
 
 ## open log connection to file
-#sink(here::here("logs", "log-01-createtallytable.txt"))
+sink(here::here("logs", "log-01-createtallytable.txt"))
 
 ## library
 library(tidyverse)

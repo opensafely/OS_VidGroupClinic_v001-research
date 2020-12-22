@@ -1,0 +1,11 @@
+
+-- Column specification --------------------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  patient_id = col_double(),
+  stp = col_character(),
+  practice = col_double(),
+  GroupVidClinic_instance = col_double()
+)
+
+`summarise()` ungrouping output (override with `.groups` argument)
+`summarise()` ungrouping output (override with `.groups` argument)
