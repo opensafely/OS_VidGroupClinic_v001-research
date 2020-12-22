@@ -2,7 +2,9 @@
 
 This is a template repository for making new OpenSAFELY resarch projects.
 
-# _title goes here_
+# _Video Group Clinics Utilisation Query - for Pilot Study_
+
+We are interested in understanding delivery of Video Group Clinics in practices. 500 practices participated in the a project piloting video group clinics and we would be interested in understanding how many video group clinics were delivered by these practices. We would also be interested in understanding delivery of video group clinics among practices that did not participate in the pilot.
 
 This is the code and configuration for our paper, _name goes here_
 
