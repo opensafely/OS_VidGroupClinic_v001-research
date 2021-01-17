@@ -5,16 +5,63 @@ expectations:
 
 actions:
 
-  generate_study_population:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition
+  generate_cohorts_main:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_codes
     outputs:
       highly_sensitive:
-        cohort: output/input.csv
+        cohort: output/input_codes.csv
 
-  run_model:
-    run: stata-mp:latest analysis/model.do
-    needs: [generate_study_population]
+  run_model_main:
+    run: r:latest analysis/02-createtallytable_codes.R
+    needs: [generate_cohorts_main]
     outputs:
       moderately_sensitive:
-        log: logs/model.log
+        log: logs/log-02-createtallytable.txt
+        tb01: output/sc02_tb01_nat_tally.csv
+        tb02: output/sc02_tb02_practice_flags.csv
+        tb03: output/sc02_tb03_stp_flags.csv
+        fig01: output/sc02_fig01_practice_flags.png
 
+  generate_cohorts_measures:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_measures --index-date-range "2019-07-01 to 2020-12-01 by month"
+    outputs:
+      highly_sensitive:
+        cohort1: output/input_measures_2019-07-01.csv
+        cohort2: output/input_measures_2019-08-01.csv
+        cohort3: output/input_measures_2019-09-01.csv
+        cohort4: output/input_measures_2019-10-01.csv
+        cohort5: output/input_measures_2019-11-01.csv
+        cohort6: output/input_measures_2019-12-01.csv
+        cohort7: output/input_measures_2020-01-01.csv
+        cohort8: output/input_measures_2020-02-01.csv
+        cohort9: output/input_measures_2020-03-01.csv
+        cohort10: output/input_measures_2020-04-01.csv
+        cohort11: output/input_measures_2020-05-01.csv
+        cohort12: output/input_measures_2020-06-01.csv
+        cohort13: output/input_measures_2020-07-01.csv
+        cohort14: output/input_measures_2020-08-01.csv
+        cohort15: output/input_measures_2020-09-01.csv
+        cohort16: output/input_measures_2020-10-01.csv
+        cohort17: output/input_measures_2020-11-01.csv
+        cohort18: output/input_measures_2020-12-01.csv
+
+    run_model_measures:
+      run: r:latest analysis/03-createnattrends_codes.R
+      needs: [generate_cohorts_measures]
+      outputs:
+        moderately_sensitive:
+          log: logs/log-03-createnattrends.txt
+          tb01: output/sc03_tb01_nattrends.csv
+          fig01: output/sc03_fig01_nattrends.png
+
+  run_all:
+    needs:
+      - run_model
+    # In order to be valid this action needs to define a run commmand and some
+    # output. We don't really care what these are but the below does the trick.
+    # In a future release of the platform, this special action won't need to be
+    # defined at all.
+    run: cohortextractor:latest --version
+    outputs:
+      moderately_sensitive:
+        whatever: project.yaml

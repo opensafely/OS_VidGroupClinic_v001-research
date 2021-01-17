@@ -11,8 +11,8 @@ from cohortextractor import (
 # Import codelists
 
 GVC_local_code_01 = codelist_from_csv(
-    "codelists-local/groupvideoclinic01_mds_snomed.csv",
-    system="ctv3", ## [!!!!] I have set above as system="ctv3" but the codelist is "snomed". Issue is patients.with_these_clinical_events throws error with this
+    "codelists-local/groupvideoclinic01_mds_ctv3.csv",
+    system="ctv3",
     column="SNOMEDCode"
 )
 
@@ -87,6 +87,19 @@ study = StudyDefinition(
         return_expectations={
             "incidence": 0.1,
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
+    ),
+
+    #### CONSULTATION INFORMATION
+    #
+    #
+    GVCcomparator_consult_count=patients.with_gp_consultations(
+        between=[start_date, end_date],
+        returning="number_of_matches_in_period",
+        return_expectations={
+            "int": {"distribution": "normal", "mean": 4, "stddev": 2},
+            "date": {"earliest": start_date, "latest": end_date},
+            "incidence": 0.7,
+        },
     ),
  
 

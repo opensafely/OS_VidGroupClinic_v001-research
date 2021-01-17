@@ -1,16 +1,13 @@
 
--- Column specification --------------------------------------------------------------------------------------------------------------------------------------------
+-- Column specification ---------------------------------------------------------------------------
 cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
   GVC01_instance = col_double(),
   GVC02_instance = col_double(),
-  GVC03_instance = col_double()
+  GVC03_instance = col_double(),
+  GVCcomparator_consult_count = col_double()
 )
 
-# A tibble: 1 x 8
-  patient_id practice GVC01_instance GVC02_instance GVC03_instance GVC01_had GVC02_had GVC03_had
-       <dbl>    <dbl>          <dbl>          <dbl>          <dbl>     <dbl>     <dbl>     <dbl>
-1   49995000   898234           2503           2473           2463      1000      1000      1000
 `summarise()` ungrouping output (override with `.groups` argument)
