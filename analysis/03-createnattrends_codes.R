@@ -39,11 +39,9 @@ rm(df_input_now)
 
 df_summary <- df_input %>%
   group_by(month) %>%
-  summarise(GVC01=sum(GVC01_instance,na.rm=T),
-            GVC02=sum(GVC02_instance,na.rm=T),
-            GVC03=sum(GVC03_instance,na.rm=T),
-            GVCcomparator_GPconsult=sum(GVCcomparator_consult_count,na.rm=T))
+  summarise_at(vars(starts_with("GVC")),~sum(.,na.rm=T))
 rm(df_input)
+
 df_summary_long <- df_summary %>% pivot_longer(cols=starts_with("GVC"),
                names_to="Code",
                values_to="Count")
@@ -58,8 +56,12 @@ ggplot(data=df_summary_long,aes(x=as.Date(month),y=Count,fill=Code)) +
 
 ggsave(paste0(here::here("output"),"/sc03_fig01_nattrends.png"),width = 40, height = 20, dpi=300,units ="cm")
 
-# ggplot(data=df_summary_long,aes(x=month,y=Count,color=Code)) +
-#   geom_point()
+ggplot(data=df_summary_long %>% mutate(month=as.Date(month)) %>% filter(Code!="GVC_comparator_consult_count"),aes(x=month,y=Count,color=Code)) +
+   geom_line()+
+  scale_x_date(date_breaks = "2 months",expand=c(0,0))+
+  theme(axis.text.x = element_text(angle = -90,vjust = 0))
+ggsave(paste0(here::here("output"),"/sc03_fig02_nattrends.png"),width = 40, height = 20, dpi=300,units ="cm")
+
 
 ## close log connection
 sink()
