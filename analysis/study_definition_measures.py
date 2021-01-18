@@ -11,22 +11,34 @@ from cohortextractor import (
 
 # Import codelists
 
-GVC_local_code_01 = codelist_from_csv(
-    "codelists-local/groupvideoclinic01_mds_cvt3.csv",
+GVC_Xagrc = codelist_from_csv(
+    "codelists-local/GVC_Xagrc_ctv3.csv",
     system="ctv3",
-    column="SNOMEDCode"
+    column="CTV3Code"
 )
 
-GVC_local_code_02 = codelist_from_csv(
-    "codelists-local/groupvideoclinic02_mds_snomed.csv",
-    system="ctv3", ## [!!!!] I have set above as system="ctv3" but the codelist is "snomed". Issue is patients.with_these_clinical_events throws error with this
-    column="SNOMEDCode"
+GVC_Y22b5 = codelist_from_csv(
+    "codelists-local/GVC_Y22b5_ctv3.csv",
+    system="ctv3", 
+    column="CTV3Code"
 )
 
-GVC_local_code_03 = codelist_from_csv(
-    "codelists-local/groupvideoclinic03_mds_snomed.csv",
-    system="ctv3", ## [!!!!] I have set above as system="ctv3" but the codelist is "snomed". Issue is patients.with_these_clinical_events throws error with this
-    column="SNOMEDCode"
+GVC_Y22b3 = codelist_from_csv(
+    "codelists-local/GVC_Y22b3_ctv3.csv",
+    system="ctv3",
+    column="CTV3Code"
+)
+
+GVC_XaXcK = codelist_from_csv(
+    "codelists-local/GVC_XaXcK_ctv3.csv",
+    system="ctv3",
+    column="CTV3Code"
+)
+
+GVC_XUkjp = codelist_from_csv(
+    "codelists-local/GVC_XUkjp_ctv3.csv",
+    system="ctv3",
+    column="CTV3Code"
 )
 
 # Specifiy study definition
@@ -65,8 +77,8 @@ study = StudyDefinition(
          },
     ),
 
-    GVC01_instance=patients.with_these_clinical_events(
-        GVC_local_code_01,    
+    GVC_Xagrc=patients.with_these_clinical_events(
+        GVC_Xagrc,    
         between = ["index_date", "index_date + 1 month"],
         returning="number_of_matches_in_period",        
         return_expectations={
@@ -74,8 +86,8 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
-    GVC02_instance=patients.with_these_clinical_events(
-        GVC_local_code_02,    
+    GVC_Y22b5=patients.with_these_clinical_events(
+        GVC_Y22b5,
         between = ["index_date","index_date + 1 month"], 
         returning="number_of_matches_in_period",        
         return_expectations={
@@ -83,8 +95,8 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
-    GVC03_instance=patients.with_these_clinical_events(
-        GVC_local_code_03,    
+    GVC_Y22b3=patients.with_these_clinical_events(
+        GVC_Y22b3,
         between = ["index_date","index_date + 1 month"],
         returning="number_of_matches_in_period",        
         return_expectations={
@@ -92,7 +104,25 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
-    GVCcomparator_consult_count=patients.with_gp_consultations(
+    GVC_XaXcK=patients.with_these_clinical_events(
+        GVC_XaXcK,
+        between = ["index_date","index_date + 1 month"],
+        returning="number_of_matches_in_period",        
+        return_expectations={
+            "incidence": 0.1,
+            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
+    ),
+
+    GVC_XUkjp=patients.with_these_clinical_events(
+        GVC_XUkjp,
+        between = ["index_date","index_date + 1 month"],
+        returning="number_of_matches_in_period",        
+        return_expectations={
+            "incidence": 0.1,
+            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
+    ),
+
+    GVC_comparator_consult_count=patients.with_gp_consultations(
         between=["index_date","index_date + 1 month"],
         returning="number_of_matches_in_period",
         return_expectations={
@@ -104,20 +134,32 @@ study = StudyDefinition(
 
 measures = [
     Measure(
-        id="GVC01_stp",
-        numerator="GVC01_instance",
+        id="GVC_Xagrc_stp",
+        numerator="GVC_Xagrc",
         denominator="population",
         group_by="stp"
     ),
     Measure(
-        id="GVC02_stp",
-        numerator="GVC02_instance",
+        id="GVC_Y22b5_stp",
+        numerator="GVC_Y22b5",
         denominator="population",
         group_by="stp"
     ),
     Measure(
-        id="GVC03_stp",
-        numerator="GVC03_instance",
+        id="GVC_Y22b3_stp",
+        numerator="GVC_Y22b3",
+        denominator="population",
+        group_by="stp"
+    ),
+    Measure(
+        id="GVC_XaXcK)stp",
+        numerator="GVC_XaXcK",
+        denominator="population",
+        group_by="stp"
+    ),
+    Measure(
+        id="GVC_XUkjp_stp",
+        numerator="GVC_XUkjp",
         denominator="population",
         group_by="stp"
     ),

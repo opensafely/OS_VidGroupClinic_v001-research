@@ -10,34 +10,22 @@ from cohortextractor import (
 
 # Import codelists
 
-GVC_Xagrc = codelist_from_csv(
-    "codelists-local/GVC_Xagrc_ctv3.csv",
+GVC_local_code_01 = codelist_from_csv(
+    "codelists-local/groupvideoclinic01_mds_ctv3.csv",
     system="ctv3",
-    column="CTV3Code"
+    column="SNOMEDCode"
 )
 
-GVC_Y22b5 = codelist_from_csv(
-    "codelists-local/GVC_Y22b5_ctv3.csv",
-    system="ctv3", 
-    column="CTV3Code"
+GVC_local_code_02 = codelist_from_csv(
+    "codelists-local/groupvideoclinic02_mds_snomed.csv",
+    system="ctv3", ## [!!!!] I have set above as system="ctv3" but the codelist is "snomed". Issue is patients.with_these_clinical_events throws error with this
+    column="SNOMEDCode"
 )
 
-GVC_Y22b3 = codelist_from_csv(
-    "codelists-local/GVC_Y22b3_ctv3.csv",
-    system="ctv3",
-    column="CTV3Code"
-)
-
-GVC_XaXcK = codelist_from_csv(
-    "codelists-local/GVC_XaXcK_ctv3.csv",
-    system="ctv3",
-    column="CTV3Code"
-)
-
-GVC_XUkjp = codelist_from_csv(
-    "codelists-local/GVC_XUkjp_ctv3.csv",
-    system="ctv3",
-    column="CTV3Code"
+GVC_local_code_03 = codelist_from_csv(
+    "codelists-local/groupvideoclinic03_mds_snomed.csv",
+    system="ctv3", ## [!!!!] I have set above as system="ctv3" but the codelist is "snomed". Issue is patients.with_these_clinical_events throws error with this
+    column="SNOMEDCode"
 )
 
 # Specifiy study definition
@@ -74,8 +62,8 @@ study = StudyDefinition(
          },
     ),
 
-    GVC_Xagrc=patients.with_these_clinical_events(
-        GVC_Xagrc,    
+    GVC01_instance=patients.with_these_clinical_events(
+        GVC_local_code_01,    
         between=[start_date, end_date],
         returning="number_of_matches_in_period",        
         return_expectations={
@@ -83,8 +71,8 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
-    GVC_Y22b5=patients.with_these_clinical_events(
-        GVC_Y22b5,    
+    GVC02_instance=patients.with_these_clinical_events(
+        GVC_local_code_02,    
         between=[start_date, end_date],
         returning="number_of_matches_in_period",        
         return_expectations={
@@ -92,26 +80,8 @@ study = StudyDefinition(
             "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
     ),
 
-    GVC_Y22b3=patients.with_these_clinical_events(
-        GVC_Y22b3,    
-        between=[start_date, end_date],
-        returning="number_of_matches_in_period",        
-        return_expectations={
-            "incidence": 0.1,
-            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
-    ),
-
-    GVC_XaXcK=patients.with_these_clinical_events(
-        GVC_XaXcK,    
-        between=[start_date, end_date],
-        returning="number_of_matches_in_period",        
-        return_expectations={
-            "incidence": 0.1,
-            "int": {"distribution": "normal", "mean": 3, "stddev": 0.5}},
-    ),
-
-    GVC_XUkjp=patients.with_these_clinical_events(
-        GVC_XUkjp,    
+    GVC03_instance=patients.with_these_clinical_events(
+        GVC_local_code_03,    
         between=[start_date, end_date],
         returning="number_of_matches_in_period",        
         return_expectations={
@@ -122,7 +92,7 @@ study = StudyDefinition(
     #### CONSULTATION INFORMATION
     #
     #
-    GVC_comparator_consult_count=patients.with_gp_consultations(
+    GVCcomparator_consult_count=patients.with_gp_consultations(
         between=[start_date, end_date],
         returning="number_of_matches_in_period",
         return_expectations={

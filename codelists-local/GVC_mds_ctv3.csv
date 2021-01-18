@@ -1,0 +1,6 @@
+type,CTV3Code,nm,notes
+ctv3,Xagrc,Participant in group session,CTV3 snomed lkp
+localTPP,Y22b5,Consultation via video conference,UKB
+localTPP,Y22b3,Signposting to GP (general practitioner) video consultation,UKB
+ctv3,XaXcK,Telemedicine consultation,CTV3 snomed lkp
+ctv3,XUkjp,Telemedicine consultation with patient,SnomedCTbrowser refset

@@ -4,10 +4,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -16,10 +18,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -28,10 +32,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -40,10 +46,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -52,10 +60,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -64,10 +74,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -76,10 +88,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -88,10 +102,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -100,10 +116,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -112,10 +130,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -124,10 +144,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -136,10 +158,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -148,10 +172,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -160,10 +186,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -172,10 +200,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -184,10 +214,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -196,10 +228,12 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
 
@@ -208,10 +242,11 @@ cols(
   patient_id = col_double(),
   stp = col_character(),
   practice = col_double(),
-  GVC01_instance = col_double(),
-  GVC02_instance = col_double(),
-  GVC03_instance = col_double(),
-  GVCcomparator_consult_count = col_double()
+  GVC_Xagrc = col_double(),
+  GVC_Y22b5 = col_double(),
+  GVC_Y22b3 = col_double(),
+  GVC_XaXcK = col_double(),
+  GVC_XUkjp = col_double(),
+  GVC_comparator_consult_count = col_double()
 )
 
-`summarise()` ungrouping output (override with `.groups` argument)
