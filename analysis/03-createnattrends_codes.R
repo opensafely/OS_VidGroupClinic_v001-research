@@ -22,7 +22,7 @@ library(here)
 library(svglite)
 `%!in%` = Negate(`%in%`)
 
-query_dates=seq(as.Date("2019-07-01"),length=18,by="months")
+query_dates=seq(as.Date("2019-01-01"),length=24,by="months")
 query_dates <- paste0(query_dates)
 ## import and pre-process cohort data
 
@@ -46,6 +46,7 @@ df_summary <- df_input %>%
 df_summary_pop <- df_input %>% group_by(month) %>% summarise(GVC_population=n())
 df_summary <- left_join(df_summary,df_summary_pop,id="month")
 rm(df_input)
+rm(df_summary_pop)
 
 df_summary_long <- df_summary %>% pivot_longer(cols=starts_with("GVC"),
                names_to="Code",
