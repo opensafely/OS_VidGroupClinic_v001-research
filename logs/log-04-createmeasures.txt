@@ -1,0 +1,56 @@
+
+-- Column specification -------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  GVC_comparator_consult_count = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  GVC_Xagrc = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  GVC_Y22b5 = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  GVC_Y22b3 = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+
+-- Column specification -------------------------------------------------------------------------------------------------------------------------------------
+cols(
+  practice = col_double(),
+  GVC_XaXcK = col_double(),
+  population = col_double(),
+  value = col_double(),
+  date = col_date(format = "")
+)
+
+`summarise()` regrouping output by 'date' (override with `.groups` argument)
+`summarise()` regrouping output by 'date' (override with `.groups` argument)
+`summarise()` regrouping output by 'date' (override with `.groups` argument)
+`summarise()` regrouping output by 'date' (override with `.groups` argument)
+`summarise()` regrouping output by 'date' (override with `.groups` argument)
+[1] FALSE

@@ -134,39 +134,39 @@ study = StudyDefinition(
 
 measures = [
     Measure(
-        id="GVC_Xagrc_stp",
+        id="GVC_Xagrc_practice",
         numerator="GVC_Xagrc",
         denominator="population",
-        group_by="stp"
+        group_by="practice"
     ),
     Measure(
-        id="GVC_Y22b5_stp",
+        id="GVC_Y22b5_practice",
         numerator="GVC_Y22b5",
         denominator="population",
-        group_by="stp"
+        group_by="practice"
     ),
     Measure(
-        id="GVC_Y22b3_stp",
+        id="GVC_Y22b3_practice",
         numerator="GVC_Y22b3",
         denominator="population",
-        group_by="stp"
+        group_by="practice"
     ),
     Measure(
-        id="GVC_XaXcK)stp",
+        id="GVC_XaXcK_practice",
         numerator="GVC_XaXcK",
         denominator="population",
-        group_by="stp"
+        group_by="practice"
     ),
     Measure(
-        id="GVC_XUkjp_stp",
+        id="GVC_XUkjp_practice",
         numerator="GVC_XUkjp",
         denominator="population",
-        group_by="stp"
+        group_by="practice"
     ),
     Measure(
-        id="GVCcomparator_stp",
-        numerator="GVCcomparator_consult_count",
+        id="GVCcomparator_practice",
+        numerator="GVC_comparator_consult_count",
         denominator="population",
-        group_by="stp"
+        group_by="practice"
     ),
 ]

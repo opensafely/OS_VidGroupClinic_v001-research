@@ -19,6 +19,12 @@ sink(here::here("logs", "log-02-createtallytable.txt"))
 ## library
 library(tidyverse)
 library(here)
+library(svglite)
+
+# create directory for saving plots, if not existent
+if (!dir.exists(here::here("output", "plots"))){
+  dir.create(here::here("output", "plots"))
+}
 
 
 ## import and pre-process cohort data
@@ -79,7 +85,7 @@ ggplot(tb02_practice_flags_, aes(fill=`Instance presence`,x=code, y=no_practices
 #   theme(axis.text.x = element_text(angle = -45),text = element_text(size=17))+
 #   labs(title="Portion of practices with code recorded",y="Count of practices",x="Code")
 
-ggsave(paste0(here::here("output"),"/sc02_fig01_practice_flags.png"),width = 40, height = 20, dpi=300,units ="cm")
+ggsave(paste0(here::here("output"),"/sc02_fig01_practice_flags.svg"),width = 40, height = 20, dpi=300,units ="cm")
 
 ## STP tally - no STPs with at least an instance
 tb03_stp_flags <- df_cleaned %>% group_by(stp) %>% summarise_at(vars(ends_with("had")), ~ ifelse(sum(.)>0,1,0))

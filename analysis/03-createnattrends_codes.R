@@ -27,12 +27,12 @@ query_dates <- paste0(query_dates)
 ## import and pre-process cohort data
 
 df_input <- read_csv(
-  here::here("output",paste0("input_measures_",  query_dates[1], ".csv")))
+  here::here("output","measures",paste0("input_measures_",  query_dates[1], ".csv")))
 df_input <- df_input %>% mutate(month=query_dates[1])
 
 for (datenow in tail(query_dates,-1)){
   df_input_now <- read_csv(
-    here::here("output",paste0("input_measures_",  datenow, ".csv")))
+    here::here("output","measures",paste0("input_measures_",  datenow, ".csv")))
   df_input_now <- df_input_now %>% mutate(month=datenow)
   df_input <- df_input %>% bind_rows(df_input_now)
 }
@@ -66,7 +66,7 @@ ggsave(paste0(here::here("output"),"/sc03_fig01_nattrends.svg"),width = 40, heig
 # Disclosiveness: plot of national monthly tally of clinical code occurrence, not deemed disclosive. 
 
 
-ggplot(data=df_summary_long %>% filter(Code%!in% c("GVC_comparator_consult_count","GVC_population")),aes(x=month,y=Count,color=Code)) +
+ggplot(data=df_summary_long %>% filter(Code %!in% c("GVC_comparator_consult_count","GVC_population")),aes(x=month,y=Count,color=Code)) +
    geom_line()+
   scale_x_date(date_breaks = "2 months",expand=c(0,0))+
   theme(axis.text.x = element_text(angle = -90,vjust = 0))
