@@ -8,15 +8,16 @@ Premise: We are interested in understanding delivery of Video Group Clinics in p
 
 Coding of Video Group Clinics is an issue, especially as non-SNOMED, hence the focus of this initial analysis is to, for now, understand the use patterns and prevalence of related codes. The coding git issue can be found [here](https://github.com/opensafely/codelist-development/issues/50).
 
-Analysis - essentially keeping it simple and outputting via R:
-* The number of instances of each code [in the last 18 months] and number of unique patients with those codes
+Analysis:
+* The number of instances of each code [in the last 24 months] and number of unique patients with those codes
 * Number and portion of practices having used those codes at least once
-* Monthly time-series [last 18 months] of code instances (+ GP consultations as trend comparator)
+* Monthly time-series [last 24 months] of code instances by practice deciles (+ GP consultations as trend comparator) - align with Observatory work.
 
 Other caveats from initial ask - difficult to query consultations as meaningful unit; practices cannot be extracted as identifiable.
 
 This is the code and configuration for our paper, _Video Group Clinics Utilisation Query_
 
+* The overview brief is in the [Documentation folder](./docs).
 * The paper is [tba]()
 * Raw model outputs, including charts, crosstabs, etc, are in `released_outputs/`
 * If you are interested in how we defined our variables, take a look at the [study definition](analysis/study_definition_codes.py); this is written in `python`, but non-programmers should be able to understand what is going on there
