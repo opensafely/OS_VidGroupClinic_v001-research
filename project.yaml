@@ -56,7 +56,7 @@ actions:
 
   run_all:
     needs:
-      - run_model
+      - run_model_main
     # In order to be valid this action needs to define a run commmand and some
     # output. We don't really care what these are but the below does the trick.
     # In a future release of the platform, this special action won't need to be
