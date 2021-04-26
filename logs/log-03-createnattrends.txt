@@ -1,765 +1,160 @@
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-Error in View : object 'df_input' not found
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-[1] "2019-07-01"
- [1] "2019-08-01" "2019-09-01" "2019-10-01" "2019-11-01" "2019-12-01" "2020-01-01" "2020-02-01"
- [8] "2020-03-01" "2020-04-01" "2020-05-01" "2020-06-01" "2020-07-01" "2020-08-01" "2020-09-01"
-[15] "2020-10-01" "2020-11-01" "2020-12-01"
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-
--- Column specification ---------------------------------------------------------------------------
-cols(
-  patient_id = col_double(),
-  stp = col_character(),
-  practice = col_double(),
-  GVC_Xagrc = col_double(),
-  GVC_Y22b5 = col_double(),
-  GVC_Y22b3 = col_double(),
-  GVC_XaXcK = col_double(),
-  GVC_XUkjp = col_double(),
-  GVC_comparator_consult_count = col_double()
-)
-
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-`summarise()` ungrouping output (override with `.groups` argument)
-Joining, by = "month"
+[1] "directories cleared"
+[1] "Libraries loaded. Query dates established."
+[1] "Redactor defined"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2019-01-01.csv"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2019-02-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2019-03-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2019-04-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2019-05-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2019-06-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2019-07-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2019-08-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2019-09-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2019-10-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2019-11-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2019-12-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2020-01-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2020-02-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2020-03-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2020-04-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2020-05-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2020-06-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2020-07-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2020-08-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2020-09-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2020-10-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2020-11-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+[1] "C:/Users/martina.fonseca_nhsx/Sandbox/OS_VidGroupClinic_v001-research/output/measures/input_measures_2020-12-01.csv"
+[1] "loaded"
+[1] "aggregated"
+[1] "mutated"
+[1] "bound to master"
+  practice gp_consult_count snomed_GVCall snomed_1092811000000108 snomed_1323941000000101 snomed_325921000000107
+1  3684295           592518        300048                   59819                   59968                  59408
+  population
+1     240000
+    region              stp               practice     gp_consult_count snomed_GVCall    snomed_1092811000000108
+ Length:37065       Length:37065       Min.   : 10.0   Min.   : -3.00   Min.   : 0.000   Min.   : 0.000         
+ Class :character   Class :character   1st Qu.: 75.0   1st Qu.:  5.00   1st Qu.: 3.000   1st Qu.: 0.000         
+ Mode  :character   Mode  :character   Median : 99.0   Median : 12.00   Median : 6.000   Median : 0.000         
+                                       Mean   : 99.4   Mean   : 15.99   Mean   : 8.095   Mean   : 1.614         
+                                       3rd Qu.:124.0   3rd Qu.: 23.00   3rd Qu.:12.000   3rd Qu.: 3.000         
+                                       Max.   :188.0   Max.   :107.00   Max.   :68.000   Max.   :31.000         
+ snomed_1323941000000101 snomed_325921000000107   population        month          
+ Min.   : 0.000          Min.   : 0.000         Min.   : 1.000   Length:37065      
+ 1st Qu.: 0.000          1st Qu.: 0.000         1st Qu.: 2.000   Class :character  
+ Median : 0.000          Median : 0.000         Median : 5.000   Mode  :character  
+ Mean   : 1.618          Mean   : 1.603         Mean   : 6.475                     
+ 3rd Qu.: 3.000          3rd Qu.: 3.000         3rd Qu.: 9.000                     
+ Max.   :24.000          Max.   :23.000         Max.   :42.000                     
+ [1] region                  stp                     practice                gp_consult_count       
+ [5] snomed_GVCall           snomed_1092811000000108 snomed_1323941000000101 snomed_325921000000107 
+ [9] population              month                  
+<0 rows> (or 0-length row.names)
+[1] "summary created -a"
+[1] "practice calc 1"
+[1] "practice calc 2"
+[1] "practice calc 3"
+[1] "practice calc 4"
+[1] "practice calc 5"
+[1] "practice fig03 created"
+[1] "practice fig03 saved"
+[1] "practice fig04a created"
+[1] "practice fig04 saved"
+[1] "practice fig04 created"
+[1] "practice fig04 saved"
+[1] "national calc 1"
+[1] "national calc2"
+[1] "national calc saved"
+[1] "national fig01 created"
+[1] "national fig01 saved"
+[1] "national fig02 created"
+[1] "national fig02 saved"

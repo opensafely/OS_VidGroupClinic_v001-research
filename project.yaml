@@ -5,23 +5,6 @@ expectations:
 
 actions:
 
-  generate_cohorts_main:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_codes
-    outputs:
-      highly_sensitive:
-        cohort: output/input_codes.csv
-
-  run_model_main:
-    run: r:latest analysis/02-createtallytable_codes.R
-    needs: [generate_cohorts_main]
-    outputs:
-      moderately_sensitive:
-        log: logs/log-02-createtallytable.txt
-        tb01: output/sc02_tb01_nat_tally.csv
-        tb02: output/sc02_tb02_practice_flags.csv
-        tb03: output/sc02_tb03_stp_flags.csv
-        fig01: output/sc02_fig01_practice_flags.svg
-
   generate_cohorts_long:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_measures --index-date-range "2019-01-01 to 2020-12-01 by month" --output-dir=output/measures
     outputs:
@@ -41,9 +24,12 @@ actions:
       outputs:
         moderately_sensitive:
           log: logs/log-03-createnattrends.txt
-          tb01: output/sc03_tb01_nattrends.csv
-          fig01: output/sc03_fig01_nattrends.svg
-          fig02: output/sc03_fig02_nattrends.svg
+          tb01: output/plots/sc03_tb01_nattrends.csv
+          fig01: output/plots/sc03_fig01_nattrends.svg
+          fig02: output/plots/sc03_fig02_nattrends.svg
+          fig03: output/plots/sc03_fig03_pracnatcoverage.svg
+          fig04: output/plots/sc03_fig04_pracbyregcoverage.svg
+          fig04b: output/plots/sc03_fig04b_pracbyregcoverage.svg
 
   run_model_measures:
         run: r:latest analysis/02-createtemporal.R
@@ -51,5 +37,30 @@ actions:
         outputs:
           moderately_sensitive:
             log: logs/log-02-createtemporal.txt
-            figall: output/plots/plot_each_GVC*_practice.svg
-            figquant: output/plots/plot_quantiles_GVC*_practice.svg
+            red_measures: output/tables/redacted_*.csv
+            #figall: output/plots/plot_each_*_practice.svg
+            figquant: output/plots/plot_quantiles_*_practice.svg
+            figlogquant: output/plots/plot_logquantiles_*_practice.svg
+
+
+  ### Weekly tallies
+  generate_cohorts_weekly2021:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_measures_weekly --index-date-range "2020-01-06 to 2021-03-22 by week" --output-dir=output/measures-week
+    outputs:
+      highly_sensitive:
+        cohort: output/measures-week/input_measures_weekly_*.csv
+
+  generate_measures_weekly2021:
+    run: cohortextractor:latest generate_measures --study-definition study_definition_measures_weekly --output-dir=output/measures-week
+    needs: [generate_cohorts_weekly2021]
+    outputs:
+      moderately_sensitive:
+        measure_csv: output/measures-week/measure_*.csv
+
+  run_model_weekly2021:
+    run: r:latest analysis/04-weekly2021.R
+    needs: [generate_cohorts_weekly2021,generate_measures_weekly2021]
+    outputs:
+      moderately_sensitive:
+        log: logs/log-04-weekly2021.txt
+        tab1: output/tables/sc04-weeklynattrend.csv
