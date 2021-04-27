@@ -75,11 +75,11 @@ redactor <- function(n, threshold=6,e_overwrite=NA_integer_){
 #   denominator = "population",
 #   group_by = rep("practice",1,n_meas)
 # )
-n_meas=5
+n_meas=4
 md_tbl <- tibble(
-  measure = c("gpc","snomed_GVCall","snomed_1092811000000108","snomed_1323941000000101","snomed_325921000000107"),
-  measure_col=c("gp_consult_count","snomed_GVCall","snomed_1092811000000108","snomed_1323941000000101","snomed_325921000000107"),
-  measure_label = c("GPconsult","GVC-relevant snomed codes","Participant in group session","Group consultation via video conference","Consultation via video conference"),
+  measure = c("gpc","snomed_GVCall","snomed_1092811000000108","snomed_325921000000107"),
+  measure_col=c("gp_consult_count","snomed_GVCall","snomed_1092811000000108","snomed_325921000000107"),
+  measure_label = c("GPconsult","GVC-relevant snomed codes","Participant in group session","Consultation via video conference"),
   by = rep("practice",1,n_meas),
   by_label = rep("by practice",1,n_meas),
   id = paste0(measure, "_", by),
