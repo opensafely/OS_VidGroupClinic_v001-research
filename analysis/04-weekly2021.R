@@ -21,6 +21,10 @@ sink(here::here("logs", "log-04-weekly2021.txt"))
 if (!dir.exists(here::here("output", "tables"))){
   dir.create(here::here("output", "tables"))
 }
+# create directory for saving plots, if not existent
+if (!dir.exists(here::here("output", "plots"))){
+  dir.create(here::here("output", "plots"))
+}
 print("directories cleared")
 
 ## library
