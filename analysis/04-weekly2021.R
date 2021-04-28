@@ -29,8 +29,6 @@ library(here)
 library(svglite)
 `%!in%` = Negate(`%in%`)
 
-query_dates=seq(as.Date("2019-01-01"),length=24,by="months")
-query_dates <- paste0(query_dates)
 print("Libraries loaded. Query dates established.")
 
 ## Redactor code (W.Hulme)
@@ -59,9 +57,27 @@ df_input <- read_csv(here::here("output","measures-week","measure_gpc_rate.csv")
   mutate(Code="gp_consult_count") %>%
   rename(Count=gp_consult_count)
 
+ggplot(data=df_input,aes(x=date,y=Count)) +
+  geom_area(stat="identity",fill="#56B4E9") +
+  facet_wrap(~region,nrow=2) +
+  labs(y="Weekly instance count",title="GP consultations")+
+  scale_x_date(date_breaks = "4 weeks",expand=c(0,0))  +
+  theme(axis.text.x = element_text(angle = -90,vjust = 0))
+ggsave(paste0(here::here("output","plots"),"/sc04_gpconsult_regtrends.svg"),width = 40, height = 30, dpi=300,units ="cm")
+
+
 df_now <- read_csv(here::here("output","measures-week","measure_snomed_1092811000000108.csv")) %>%
   mutate(Code="1092811000000108") %>%
   rename(Count=snomed_1092811000000108)
+
+ggplot(data=df_now,aes(x=date,y=Count)) +
+  geom_area(stat="identity",fill="#56B4E9") +
+  facet_wrap(~region,nrow=2) +
+  labs(y="Weekly instance count",title=paste0("Code: ",unique(df_now$Code)),subtitle="Participant in group consultation")+
+  scale_x_date(date_breaks = "4 weeks",expand=c(0,0))  +
+  theme(axis.text.x = element_text(angle = -90,vjust = 0))
+ggsave(paste0(here::here("output","plots"),"/sc04_1092811000000108_regtrends.svg"),width = 40, height = 30, dpi=300,units ="cm")
+
 
 df_input <- df_input %>% bind_rows(df_now)
 
@@ -69,13 +85,33 @@ df_now <- read_csv(here::here("output","measures-week","measure_snomed_132394100
   mutate(Code="1323941000000101") %>%
   rename(Count=snomed_1323941000000101)
 
+ggplot(data=df_now,aes(x=date,y=Count)) +
+  geom_area(stat="identity",fill="#56B4E9") +
+  facet_wrap(~region,nrow=2) +
+  labs(y="Weekly instance count",title=paste0("Code: ",unique(df_now$Code)),subtitle="Group consultation via video conference")+
+  scale_x_date(date_breaks = "4 weeks",expand=c(0,0))  +
+  theme(axis.text.x = element_text(angle = -90,vjust = 0))
+ggsave(paste0(here::here("output","plots"),"/sc04_1323941000000101_regtrends.svg"),width = 40, height = 30, dpi=300,units ="cm")
+
+
 df_input <- df_input %>% bind_rows(df_now)
 
 df_now <- read_csv(here::here("output","measures-week","measure_snomed_325921000000107.csv"))%>%
   mutate(Code="325921000000107") %>%
   rename(Count=snomed_325921000000107)
 
+ggplot(data=df_now,aes(x=date,y=Count)) +
+  geom_area(stat="identity",fill="#56B4E9") +
+  facet_wrap(~region,nrow=2) +
+  labs(y="Weekly instance count",title=paste0("Code: ",unique(df_now$Code)),subtitle="Consultation via video conference encounter type")+
+  scale_x_date(date_breaks = "4 weeks",expand=c(0,0))  +
+  theme(axis.text.x = element_text(angle = -90,vjust = 0))
+ggsave(paste0(here::here("output","plots"),"/sc04_325921000000107_regtrends.svg"),width = 40, height = 30, dpi=300,units ="cm")
+
 df_input <- df_input %>% bind_rows(df_now)
+
+
+
 
 # Leave only national TPP information rather than regional
 df_output <- df_input %>% group_by(Code,date) %>% summarise(Count=sum(Count,na.rm=T),population=sum(population,na.rm=T)) %>% ungroup()
