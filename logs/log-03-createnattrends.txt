@@ -117,10 +117,8 @@
 [1] "aggregated"
 [1] "mutated"
 [1] "bound to master"
-  practice gp_consult_count snomed_GVCall snomed_1092811000000108 snomed_1323941000000101 snomed_325921000000107
-1  3684295           592518        300048                   59819                   59968                  59408
-  population
-1     240000
+  practice gp_consult_count snomed_GVCall snomed_1092811000000108 snomed_1323941000000101 snomed_325921000000107 population
+1  3684295           592518        300048                   59819                   59968                  59408     240000
     region              stp               practice     gp_consult_count snomed_GVCall    snomed_1092811000000108
  Length:37065       Length:37065       Min.   : 10.0   Min.   : -3.00   Min.   : 0.000   Min.   : 0.000         
  Class :character   Class :character   1st Qu.: 75.0   1st Qu.:  5.00   1st Qu.: 3.000   1st Qu.: 0.000         
@@ -135,9 +133,8 @@
  Mean   : 1.618          Mean   : 1.603         Mean   : 6.475                     
  3rd Qu.: 3.000          3rd Qu.: 3.000         3rd Qu.: 9.000                     
  Max.   :24.000          Max.   :23.000         Max.   :42.000                     
- [1] region                  stp                     practice                gp_consult_count       
- [5] snomed_GVCall           snomed_1092811000000108 snomed_1323941000000101 snomed_325921000000107 
- [9] population              month                  
+ [1] region                  stp                     practice                gp_consult_count        snomed_GVCall          
+ [6] snomed_1092811000000108 snomed_1323941000000101 snomed_325921000000107  population              month                  
 <0 rows> (or 0-length row.names)
 [1] "summary created -a"
 [1] "practice calc 1"
@@ -158,3 +155,5 @@
 [1] "national fig01 saved"
 [1] "national fig02 created"
 [1] "national fig02 saved"
+[1] "national fig05 created"
+[1] "national fig05 saved"

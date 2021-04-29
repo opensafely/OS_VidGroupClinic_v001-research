@@ -32,7 +32,7 @@ library(here)
 library(svglite)
 `%!in%` = Negate(`%in%`)
 
-query_dates=seq(as.Date("2019-01-01"),length=24,by="months")
+query_dates=seq(as.Date("2019-01-01"),length=27,by="months")
 query_dates <- paste0(query_dates)
 print("Libraries loaded. Query dates established.")
 
@@ -85,7 +85,7 @@ print(head(df_input,0))
 rm(df_input_now)
 
 df_summary <- df_input %>%
-  group_by(month) %>%
+  group_by(month,practice) %>%
   summarise_at(vars(starts_with("snomed"),population,gp_consult_count),~sum(.,na.rm=T))
 print("summary created -a")
 
@@ -164,14 +164,24 @@ df_summary_long <- df_summary %>% pivot_longer(cols=c("gp_consult_count",union(s
                names_to="Code",
                values_to="Count")
 print("national calc 1")
-df_summary_long$Count <- redactor(df_summary_long$Count,threshold =6,e_overwrite=NA_integer_)
+
+df_summary_long <- df_summary_long %>% ungroup() %>% group_by(month,Code) %>%
+  summarise(populationTPP=sum(population,na.rm=T),
+         practices=n_distinct(practice),
+         practicewithcode=sum(ifelse(Count>0,1,0)),
+         practicecoverage=practicewithcode/practices*100,
+         populationpracwithcode=sum(ifelse(Count>0,population,0)),
+         Count=sum(Count,na.rm=T))
+df_summary_long_s <- df_summary_long
+df_summary_long_s$Count <- redactor(df_summary_long_s$Count,threshold =6,e_overwrite=NA_integer_)
+df_summary_long_s <- df_summary_long_s %>% mutate(populationpracwithcode=ifelse(practicewithcode==1,NA_integer_,populationpracwithcode)) 
 print("national calc2")
-write.csv(df_summary_long,paste0(here::here("output","tables"),"/sc03_tb01_nattrends.csv"))
+write.csv(df_summary_long_s,paste0(here::here("output","tables"),"/sc03_tb01_nattrends.csv"))
 print("national calc saved")
 # Disclosiveness: national monthly tally of clinical code occurrence, not deemed disclosive. 
 
 df_summary_long$month <- as.Date(df_summary_long$month)
-df_summary_long <- df_summary_long %>% mutate(rate_per_1000=Count/population*1000)
+df_summary_long <- df_summary_long %>% mutate(rate_per_1000=Count/populationTPP*1000)
 ggplot(data=df_summary_long %>% filter(Code=="gp_consult_count"|substr(Code,1,nchar(myprefix))==myprefix),aes(x=month,y=rate_per_1000,group=Code)) +
   geom_bar(stat="identity",fill="#56B4E9") +
   facet_wrap(~Code,nrow=4,scales="free_y") +
@@ -184,16 +194,38 @@ ggsave(paste0(here::here("output","plots"),"/sc03_fig01_nattrends.svg"),width = 
 print("national fig01 saved")
 # Disclosiveness: plot of national monthly tally of clinical code occurrence, not deemed disclosive. 
 
-ggplot(data=df_summary_long %>% filter(substr(Code,1,nchar(myprefix))==myprefix),aes(x=month,y=rate_per_1000,color=Code)) +
-   geom_line()+
-  scale_x_date(date_breaks = "2 months",expand=c(0,0))+
-  labs(y="Instance rate (per 1,000)")+
+# ggplot(data=df_summary_long %>% filter(substr(Code,1,nchar(myprefix))==myprefix),aes(x=month,y=rate_per_1000,color=Code)) +
+#    geom_line()+
+#   scale_x_date(date_breaks = "2 months",expand=c(0,0))+
+#   labs(y="Instance rate (per 1,000)")+
+#   theme(axis.text.x = element_text(angle = -90,vjust = 0))
+# print("national fig02 created")
+
+df_summary_long <- df_summary_long %>% mutate(rate_per_1000f=Count/populationpracwithcode*1000)
+ggplot(data=df_summary_long %>% filter(Code=="gp_consult_count"|substr(Code,1,nchar(myprefix))==myprefix),aes(x=month,y=rate_per_1000f,group=Code)) +
+  geom_bar(stat="identity",fill="lightskyblue2") +
+  facet_wrap(~Code,nrow=4,scales="free_y") +
+  labs(y="Instance rate (per 1,000 in practices with code)",caption="Rate based on population of practices with code rather than full TPP")+
+  scale_x_date(date_breaks = "2 months",expand=c(0,0))  +
   theme(axis.text.x = element_text(angle = -90,vjust = 0))
 print("national fig02 created")
 
 ggsave(paste0(here::here("output","plots"),"/sc03_fig02_nattrends.svg"),width = 40, height = 20, dpi=300,units ="cm")
 print("national fig02 saved")
 # Disclosiveness: plot of national monthly tally of clinical code occurrence, not deemed disclosive. 
+
+ggplot(data=df_summary_long %>% filter(Code=="gp_consult_count"|substr(Code,1,nchar(myprefix))==myprefix),aes(x=month,y=practicecoverage,group=Code)) +
+  geom_bar(stat="identity",fill="aquamarine2") +
+  facet_wrap(~Code,nrow=4,scales="free_y") +
+  labs(y="Practice coverage (%)")+
+  scale_x_date(date_breaks = "2 months",expand=c(0,0))  +
+  theme(axis.text.x = element_text(angle = -90,vjust = 0))
+print("national fig05 created")
+
+ggsave(paste0(here::here("output","plots"),"/sc03_fig05_nattrends.svg"),width = 40, height = 20, dpi=300,units ="cm")
+print("national fig05 saved")
+#
+
 
 ## close log connection
 sink()

@@ -6,7 +6,7 @@ expectations:
 actions:
 
   generate_cohorts_long:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_measures --index-date-range "2019-01-01 to 2020-12-01 by month" --output-dir=output/measures
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_measures --index-date-range "2019-01-01 to 2021-03-01 by month" --output-dir=output/measures
     outputs:
       highly_sensitive:
         cohort1: output/measures/input_measures_*.csv
