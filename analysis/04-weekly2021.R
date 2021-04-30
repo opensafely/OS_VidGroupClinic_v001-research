@@ -65,7 +65,7 @@ ggplot(data=df_input,aes(x=date,y=Count)) +
   geom_area(stat="identity",fill="#56B4E9") +
   facet_wrap(~region,nrow=2) +
   labs(y="Weekly instance count",title="GP consultations")+
-  scale_x_date(date_breaks = "4 weeks",expand=c(0,0))  +
+  scale_x_date(date_breaks = "8 weeks",expand=c(0,0))  +
   theme(axis.text.x = element_text(angle = -90,vjust = 0))
 ggsave(paste0(here::here("output","plots"),"/sc04_gpconsult_regtrends.svg"),width = 40, height = 30, dpi=300,units ="cm")
 
@@ -75,10 +75,10 @@ df_now <- read_csv(here::here("output","measures-week","measure_snomed_109281100
   rename(Count=snomed_1092811000000108)
 
 ggplot(data=df_now,aes(x=date,y=Count)) +
-  geom_area(stat="identity",fill="#56B4E9") +
+  geom_bar(stat="identity",fill="#56B4E9") +
   facet_wrap(~region,nrow=2) +
   labs(y="Weekly instance count",title=paste0("Code: ",unique(df_now$Code)),subtitle="Participant in group consultation")+
-  scale_x_date(date_breaks = "4 weeks",expand=c(0,0))  +
+  scale_x_date(date_breaks = "8 weeks",expand=c(0,0))  +
   theme(axis.text.x = element_text(angle = -90,vjust = 0))
 ggsave(paste0(here::here("output","plots"),"/sc04_1092811000000108_regtrends.svg"),width = 40, height = 30, dpi=300,units ="cm")
 
@@ -90,10 +90,10 @@ df_now <- read_csv(here::here("output","measures-week","measure_snomed_132394100
   rename(Count=snomed_1323941000000101)
 
 ggplot(data=df_now,aes(x=date,y=Count)) +
-  geom_area(stat="identity",fill="#56B4E9") +
+  geom_bar(stat="identity",fill="#56B4E9") +
   facet_wrap(~region,nrow=2) +
   labs(y="Weekly instance count",title=paste0("Code: ",unique(df_now$Code)),subtitle="Group consultation via video conference")+
-  scale_x_date(date_breaks = "4 weeks",expand=c(0,0))  +
+  scale_x_date(date_breaks = "8 weeks",expand=c(0,0))  +
   theme(axis.text.x = element_text(angle = -90,vjust = 0))
 ggsave(paste0(here::here("output","plots"),"/sc04_1323941000000101_regtrends.svg"),width = 40, height = 30, dpi=300,units ="cm")
 
