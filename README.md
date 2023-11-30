@@ -2,7 +2,11 @@
 
 [View on OpenSAFELY](https://jobs.opensafely.org/online-consultations/group-video-consultation/)
 
-Details of the purpose and any published outputs from this project can be found at the link above.
+Details of the purpose and any published outputs from this project workspace can be found at the link above.
+
+**Status of workspace and repo:** Retired (video group clinics workstream)
+
+**Status of project:** Completed (online consultation systems workstream, see instead [OS_OC_v001-research repo](https://github.com/opensafely/OS_OC_v001-research))
 
 The contents of this repository MUST NOT be considered an accurate or valid representation of the study or its purpose. 
 This repository may reflect an incomplete or incorrect analysis with no further ongoing work.
