@@ -1,36 +1,26 @@
-# OpenSAFELY Research Template
+# ${OS_VidGroupClinic_v001-research}
 
-This is a template repository for making new OpenSAFELY resarch projects.
+[View on OpenSAFELY](https://jobs.opensafely.org/online-consultations/group-video-consultation/)
 
-# _Video Group Clinics Utilisation Query - for Pilot Study_
+Details of the purpose and any published outputs from this project workspace can be found at the link above.
 
-Premise: We are interested in understanding delivery of Video Group Clinics in practices. 500 practices participated in the a project piloting video group clinics and we would be interested in understanding how many video group clinics were delivered by these practices. We would also be interested in understanding delivery of video group clinics among practices that did not participate in the pilot.
+**Status of workspace and repo:** Retired (video group clinics workstream)
 
-Coding of Video Group Clinics is an issue, especially as non-SNOMED, hence the focus of this initial analysis is to, for now, understand the use patterns and prevalence of related codes. The coding git issue can be found [here](https://github.com/opensafely/codelist-development/issues/50).
+**Status of project:** Completed (online consultation systems workstream, see instead [OS_OC_v001-research repo](https://github.com/opensafely/OS_OC_v001-research))
 
-Analysis:
-* The number of instances of each code [in the last 24 months] and number of unique patients with those codes
-* Number and portion of practices having used those codes at least once
-* Monthly time-series [last 24 months] of code instances by practice deciles (+ GP consultations as trend comparator) - align with Observatory work.
-
-Other caveats from initial ask - difficult to query consultations as meaningful unit; practices cannot be extracted as identifiable.
-
-This is the code and configuration for our paper, _Video Group Clinics Utilisation Query_
-
-* The overview brief is in the [Documentation folder](./docs).
-* The paper is [tba]()
-* Raw model outputs, including charts, crosstabs, etc, are in `released_outputs/`
-* If you are interested in how we defined our variables, take a look at the [study definition](analysis/study_definition_codes.py); this is written in `python`, but non-programmers should be able to understand what is going on there
-* If you are interested in how we defined our code lists, look in the [codelists folder](./local-codelists/).
-* Developers and epidemiologists interested in the framework should review [the OpenSAFELY documentation](https://docs.opensafely.org)
+The contents of this repository MUST NOT be considered an accurate or valid representation of the study or its purpose. 
+This repository may reflect an incomplete or incorrect analysis with no further ongoing work.
+The content has ONLY been made public to support the OpenSAFELY [open science and transparency principles](https://www.opensafely.org/about/#contributing-to-best-practice-around-open-science) and to support the sharing of re-usable code for other subsequent users.
+No clinical, policy or safety conclusions must be drawn from the contents of this repository.
 
 # About the OpenSAFELY framework
 
-The OpenSAFELY framework is a secure analytics platform for
-electronic health records research in the NHS.
+The OpenSAFELY framework is a Trusted Research Environment (TRE) for electronic
+health records research in the NHS, with a focus on public accountability and
+research quality.
 
-Instead of requesting access for slices of patient data and
-transporting them elsewhere for analysis, the framework supports
-developing analytics against dummy data, and then running against the
-real data *within the same infrastructure that the data is stored*.
 Read more at [OpenSAFELY.org](https://opensafely.org).
+
+# Licences
+As standard, research projects have a MIT license. 
+
